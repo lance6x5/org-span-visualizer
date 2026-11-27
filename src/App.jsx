@@ -12,6 +12,8 @@ import { makeSession, parseSessionJson, sanitizeSettings } from './lib/session.j
 import { loadPrefs, savePrefs, saveSession, loadSession, clearSession, resetAllStorage } from './lib/storage.js';
 import { downloadText, exportPng, exportSvg } from './lib/download.js';
 import { useHashRoute, navigate } from './lib/useHashRoute.js';
+import { APP_VERSION, REPO_URL } from './lib/feedback.js';
+import FeedbackMenu from './components/FeedbackMenu.jsx';
 
 const AUTO_COLLAPSE_ABOVE = 150; // headcount above which deep levels start collapsed
 
@@ -182,7 +184,7 @@ export default function App() {
   const exportJson = () => {
     if (!source || !mapping) return notify('Nothing to export yet.');
     const s = makeSession({ fileName: source.fileName, headers: source.headers, rows: source.rows, mapping, settings });
-    downloadText(JSON.stringify(s, null, 2), 'org-span-session.json', 'application/json');
+    downloadText(JSON.stringify(s, null, 2), 'spanscope-session.json', 'application/json');
   };
 
   const doReset = async () => {
@@ -229,8 +231,11 @@ export default function App() {
       </a>
       <header className="app-header">
         <div className="brand">
-          <img src={`${import.meta.env.BASE_URL}icon.svg`} alt="" />
-          <h1>Org Span-of-Control Visualizer</h1>
+          <img src={`${import.meta.env.BASE_URL}icon.svg`} alt="" width="32" height="32" />
+          <div>
+            <h1>Spanscope</h1>
+            <p className="tagline">See every span of control at a glance</p>
+          </div>
         </div>
         <nav className="nav" aria-label="Main">
           {navLink('', 'Upload')}
@@ -255,6 +260,7 @@ export default function App() {
             }}
           />
           <button type="button" className="btn-small btn-danger" onClick={() => setConfirmReset(true)}>Reset all data</button>
+          <FeedbackMenu />
         </div>
       </header>
       <div className="privacy-banner" role="note">
@@ -324,8 +330,9 @@ export default function App() {
       </main>
 
       <footer className="app-footer">
-        Runs entirely in your browser · Works offline once loaded ·{' '}
-        <a href="https://github.com/lance6x5/org-span-visualizer">Source on GitHub</a>
+        Spanscope <span className="version">v{APP_VERSION}</span> · Runs entirely in your browser · Works offline once loaded ·{' '}
+        <a href={REPO_URL}>Source on GitHub</a> ·{' '}
+        <a href={`${REPO_URL}/blob/main/CHANGELOG.md`}>Changelog</a>
       </footer>
 
       <ConfirmDialog

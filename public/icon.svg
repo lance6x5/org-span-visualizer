@@ -1,10 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="96" fill="#1f6feb"/>
-  <g stroke="#ffffff" stroke-width="16" fill="none" stroke-linecap="round">
-    <path d="M256 150v70M136 290v-40h240v40M256 220v30"/>
+  <defs><linearGradient id="ssbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7b5cff"/><stop offset="1" stop-color="#4a2bc2"/></linearGradient></defs>
+  <rect width="512" height="512" rx="112" fill="url(#ssbg)"/>
+  <g>
+    <line x1="232" y1="170" x2="160" y2="282" stroke="#ffffff" stroke-width="14" stroke-linecap="round"/>
+    <line x1="232" y1="170" x2="232" y2="282" stroke="#ffffff" stroke-width="14" stroke-linecap="round"/>
+    <line x1="232" y1="170" x2="304" y2="282" stroke="#ffffff" stroke-width="14" stroke-linecap="round"/>
+    <circle cx="232" cy="170" r="28" fill="#ffffff"/>
+    <circle cx="160" cy="282" r="22" fill="#3fb950"/>
+    <circle cx="232" cy="282" r="22" fill="#f2b134"/>
+    <circle cx="304" cy="282" r="22" fill="#ff6b61"/>
+    <circle cx="232" cy="232" r="140" fill="none" stroke="#ffffff" stroke-width="32"/>
+    <line x1="342" y1="342" x2="420" y2="420" stroke="#ffffff" stroke-width="52" stroke-linecap="round"/>
   </g>
-  <rect x="196" y="90" width="120" height="70" rx="14" fill="#ffffff"/>
-  <rect x="76" y="290" width="120" height="70" rx="14" fill="#3fb950"/>
-  <rect x="196" y="290" width="120" height="70" rx="14" fill="#d29922"/>
-  <rect x="316" y="290" width="120" height="70" rx="14" fill="#f85149"/>
 </svg>

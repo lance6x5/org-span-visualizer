@@ -84,7 +84,7 @@ export default function UploadView({ onCsvText, onImportJson, error }) {
 
       <section className="card stack" aria-labelledby="import-h">
         <h2 id="import-h">Restore a session</h2>
-        <p className="muted">Import a JSON file you previously exported from this app.</p>
+        <p className="muted">Import a JSON session file you previously exported from Spanscope.</p>
         <div className="row">
           <button type="button" onClick={() => jsonInput.current.click()}>
             Import session JSON

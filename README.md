@@ -1,4 +1,8 @@
-# Org Span-of-Control Visualizer
+<p align="center"><img src="public/logo.svg" alt="Spanscope" width="420"></p>
+
+# Spanscope
+
+**See every span of control at a glance.**
 
 Upload an org roster CSV and get an interactive org chart that flags spans of control that are too wide or too narrow.
 
@@ -27,6 +31,25 @@ E002,Marcus Webb,Chief Technology Officer,E001,Engineering,Austin,FTE
 ```
 
 Leave `manager_id` blank for the top of the org. `employment_type` values containing "contract", "contingent", "vendor", "temp", or "consult" count as contractors.
+
+## Feedback & issues
+
+Found a bug or have an idea? Use **Feedback** in the app header, or go straight to [Issues](https://github.com/lance6x5/org-span-visualizer/issues):
+
+- [Report a bug](https://github.com/lance6x5/org-span-visualizer/issues/new?template=bug_report.yml)
+- [Request a feature](https://github.com/lance6x5/org-span-visualizer/issues/new?template=feature_request.yml)
+
+The in-app links simply open GitHub in a new tab with the app version (and, for bugs, your browser string) pre-filled. No roster data is ever put in the link and the app makes no network calls. A free GitHub account is required. See [CONTRIBUTING.md](CONTRIBUTING.md) for the triage flow.
+
+## Versioning
+
+Spanscope follows [Semantic Versioning](https://semver.org/). The current version is shown in the app footer.
+
+- **MAJOR**: breaking data/schema change (e.g. session JSON format or required CSV columns change incompatibly).
+- **MINOR**: new features, backwards compatible.
+- **PATCH**: bug fixes.
+
+Release notes live in [CHANGELOG.md](CHANGELOG.md); each release is tagged `vX.Y.Z` and published on the [Releases](https://github.com/lance6x5/org-span-visualizer/releases) page.
 
 ## Local development
 
@@ -62,5 +85,7 @@ src/
     download.js           Blob downloads, SVG/PNG chart export
     sample.js             embedded sample roster
     useHashRoute.js       hash routing (#/chart, #/list, #/map)
-test/org.test.js          unit tests
+    feedback.js           pre-filled GitHub issue URLs (no API calls)
+scripts/gen-icons.mjs     regenerates logo + PWA icons (no dependencies)
+test/                     unit tests (Vitest)
 ```

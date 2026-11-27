@@ -1,9 +1,9 @@
 {
   "name": "org-span-visualizer",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
-  "description": "Client-side org chart and span-of-control analyzer. Your file never leaves the browser.",
+  "description": "Spanscope: see every span of control at a glance. Client-side org chart and span-of-control analyzer. Your file never leaves the browser.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

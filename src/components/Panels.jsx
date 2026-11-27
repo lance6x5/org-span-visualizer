@@ -41,7 +41,7 @@ export function SettingsPanel({ settings, onChange, saveLocally, onToggleSave })
 export function AnalyticsPanel({ analytics, settings, onJump, notify }) {
   const { flagged } = analytics;
   const exportFlagged = (delimiter, ext) => {
-    downloadText(flaggedToDelimited(flagged, delimiter), `flagged-managers.${ext}`, ext === 'csv' ? 'text/csv' : 'text/tab-separated-values');
+    downloadText(flaggedToDelimited(flagged, delimiter), `spanscope-flagged-managers.${ext}`, ext === 'csv' ? 'text/csv' : 'text/tab-separated-values');
   };
   const copyTsv = async () => {
     try {

@@ -8,7 +8,7 @@ import { FIELDS } from './csv.js';
 export const SESSION_VERSION = 1;
 
 export function makeSession({ fileName, headers, rows, mapping, settings }) {
-  return { app: 'org-span-visualizer', version: SESSION_VERSION, savedAt: new Date().toISOString(), fileName, headers, rows, mapping, settings };
+  return { app: 'spanscope', version: SESSION_VERSION, savedAt: new Date().toISOString(), fileName, headers, rows, mapping, settings };
 }
 
 export function sanitizeSettings(s) {
@@ -32,7 +32,7 @@ export function parseSessionJson(text) {
     return { error: 'That file is not valid JSON.' };
   }
   if (!obj || typeof obj !== 'object') return { error: 'Unexpected JSON structure.' };
-  if (!Array.isArray(obj.rows) || !Array.isArray(obj.headers)) return { error: 'JSON is missing "rows" or "headers" arrays. Was it exported from this app?' };
+  if (!Array.isArray(obj.rows) || !Array.isArray(obj.headers)) return { error: 'JSON is missing "rows" or "headers" arrays. Was it exported from Spanscope?' };
   const headers = obj.headers.map(String);
   const rows = obj.rows.filter((r) => r && typeof r === 'object' && !Array.isArray(r));
   const mapping = {};

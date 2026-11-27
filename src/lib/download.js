@@ -84,13 +84,13 @@ export function chartToSvgString(svgEl) {
   return { svg: new XMLSerializer().serializeToString(clone), width, height };
 }
 
-export function exportSvg(svgEl, fileName = 'org-chart.svg') {
+export function exportSvg(svgEl, fileName = 'spanscope-org-chart.svg') {
   const { svg } = chartToSvgString(svgEl);
   downloadText('<?xml version="1.0" encoding="UTF-8"?>\n' + svg, fileName, 'image/svg+xml');
 }
 
 /** Rasterize the SVG via an offscreen canvas at 2x for crisp output. */
-export function exportPng(svgEl, fileName = 'org-chart.png', scale = 2) {
+export function exportPng(svgEl, fileName = 'spanscope-org-chart.png', scale = 2) {
   const { svg, width, height } = chartToSvgString(svgEl);
   return new Promise((resolve, reject) => {
     const url = URL.createObjectURL(new Blob([svg], { type: 'image/svg+xml;charset=utf-8' }));
