@@ -283,3 +283,6 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.45); }
 .feedback-menu a:hover, .feedback-menu a:focus-visible { background: var(--surface-2); }
 .feedback-menu p { margin: 0.25rem 0.5rem 0; }
 .app-footer .version { font-variant-numeric: tabular-nums; font-weight: 600; }
+.studio-credit { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.25rem 0.4rem; margin: 0.5rem 0 0; font-size: 0.75rem; }
+.studio-credit img { width: 16px; height: 16px; flex: none; }
+.studio-credit a { text-underline-offset: 2px; }

@@ -4,6 +4,10 @@
 
 **See every span of control at a glance.**
 
+A **Silverlight DevTech** project · © 2026 Silverlight DevTech. Source-available under the [PolyForm Noncommercial License 1.0.0](LICENSE.md).
+
+More apps: https://lance6x5.github.io/
+
 Upload an org roster CSV and get an interactive org chart that flags spans of control that are too wide or too narrow.
 
 **Live app:** https://lance6x5.github.io/org-span-visualizer/
@@ -89,3 +93,17 @@ src/
 scripts/gen-icons.mjs     regenerates logo + PWA icons (no dependencies)
 test/                     unit tests (Vitest)
 ```
+
+## License
+
+Spanscope is **source-available**, not open source in the OSI sense. It is licensed under the [PolyForm Noncommercial License 1.0.0](LICENSE.md) (SPDX: `PolyForm-Noncommercial-1.0.0`).
+
+- **Free for noncommercial use:** personal, educational, research, nonprofit and other noncommercial use is allowed under the license terms.
+- **Commercial use needs a separate license:** this includes selling it, hosting it as a paid service, or using it inside a business product. Commercial licenses are available from Silverlight DevTech; to ask, open a [GitHub issue on this repo](https://github.com/lance6x5/org-span-visualizer/issues).
+- **Redistribution:** anyone who shares a copy must keep [LICENSE.md](LICENSE.md) and its `Required Notice:` line.
+
+Third-party dependencies keep their own licenses.
+
+## Trademarks
+
+Spanscope and its logo are trademarks of Silverlight DevTech. The license covers the code only, not the names or logos, so forks must use a different name and logo.

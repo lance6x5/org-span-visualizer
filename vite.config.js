@@ -9,7 +9,9 @@ const pkg = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 
 // server needs inline scripts/websockets for HMR). connect-src 'self' means the
 // page physically cannot send data to any other origin. The in-app feedback
 // links are ordinary <a target="_blank"> navigations to github.com, which CSP
-// fetch directives do not govern, so no CSP change is needed for them.
+// fetch directives do not govern, so no CSP change is needed for them. The same
+// applies to the footer studio credit: its "Noncommercial license" and "More apps"
+// links are plain navigations and its mark is a local file (img-src 'self').
 const CSP =
   "default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; " +
   "script-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; " +

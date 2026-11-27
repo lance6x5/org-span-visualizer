@@ -1,9 +1,11 @@
 {
   "name": "org-span-visualizer",
   "private": true,
-  "version": "1.1.0",
+  "version": "1.2.0",
   "type": "module",
   "description": "Spanscope: see every span of control at a glance. Client-side org chart and span-of-control analyzer. Your file never leaves the browser.",
+  "author": "Silverlight DevTech",
+  "license": "PolyForm-Noncommercial-1.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

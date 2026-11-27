@@ -14,6 +14,7 @@ import { downloadText, exportPng, exportSvg } from './lib/download.js';
 import { useHashRoute, navigate } from './lib/useHashRoute.js';
 import { APP_VERSION, REPO_URL } from './lib/feedback.js';
 import FeedbackMenu from './components/FeedbackMenu.jsx';
+import StudioCredit from './components/StudioCredit.jsx';
 
 const AUTO_COLLAPSE_ABOVE = 150; // headcount above which deep levels start collapsed
 
@@ -333,6 +334,7 @@ export default function App() {
         Spanscope <span className="version">v{APP_VERSION}</span> · Runs entirely in your browser · Works offline once loaded ·{' '}
         <a href={REPO_URL}>Source on GitHub</a> ·{' '}
         <a href={`${REPO_URL}/blob/main/CHANGELOG.md`}>Changelog</a>
+        <StudioCredit />
       </footer>
 
       <ConfirmDialog
