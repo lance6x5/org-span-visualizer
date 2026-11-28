@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-11-27
+
+### Added
+- "Install app" button in the header. It appears only when the browser can install the app and it isn't installed yet (Chrome, Edge, Android), shows "Share > Add to Home Screen" steps on iPhone/iPad, and disappears once installed.
+
 ## [1.2.1] - 2026-11-27
 
 ### Changed
@@ -49,7 +54,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Opt-in local session saving (IndexedDB), reset-all-data, offline-capable PWA, light/dark mode, keyboard accessibility.
 - Strict production Content-Security-Policy (`connect-src 'self'`) and GitHub Pages deployment via GitHub Actions.
 
-[Unreleased]: https://github.com/lance6x5/org-span-visualizer/compare/v1.2.1...HEAD
+[Unreleased]: https://github.com/lance6x5/org-span-visualizer/compare/v1.3.0...HEAD
+[1.3.0]: https://github.com/lance6x5/org-span-visualizer/compare/v1.2.1...v1.3.0
 [1.2.1]: https://github.com/lance6x5/org-span-visualizer/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/lance6x5/org-span-visualizer/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/lance6x5/org-span-visualizer/compare/v1.0.0...v1.1.0
